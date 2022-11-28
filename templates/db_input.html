@@ -1,0 +1,91 @@
+<!--sourced and modified from https://www.w3docs.com/learn-html/html-form-templates.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Income Prediction Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+  <ul>
+  <li><a href="/">Form input</a></li>
+  <li style="background-color:gray;"><a href="/db_input">DB input</a></li>
+  <li><a href="/file_input">File input</a></li>
+<li><a href="/help">Help</a></li>
+</ul>
+    <div class="testbox">
+      <form action="/db_input" method="POST">
+        <div class="banner">
+          <h1>Income Prediction Application</h1>
+        </div>
+          <div>
+          <h2 style="background-color:white; font-weight: bold;
+          height: 40px; width: 100%;line-height: 40px;text-valign: center;">
+              {{result}}</h2>
+            </div>
+        <h2>Please Enter The Database Credentials</h2>
+
+          <div class="item">
+              <p>Database<sup style="color: red;">*</sup></p>
+            <select name="db_name" id="db_name">
+                <option value="postgres">PostgreSQL</option>
+              <option value="mysql">MySQL</option>
+
+            </select>
+            </div>
+
+        <div class="item">
+            <p>Server<sup style="color: red;">*</sup></p>
+            <input type="text" name="server" id="server" required/>
+        </div>
+
+         <div class="item">
+            <p>Database<sup style="color: red;">*</sup></p>
+            <input type="text" name="database" id="database" required/>
+         </div>
+
+          <div class="item">
+            <p>Table<sup style="color: red;">*</sup></p>
+            <input type="text" name="tbl" id="tbl" required/>
+         </div>
+
+          <div class="item">
+            <p>Username<sup style="color: red;">*</sup></p>
+            <input type="text" name="username" id="username" required/>
+         </div>
+
+          <div class="item">
+            <p>Password<sup style="color: red;">*</sup></p>
+            <input type="password" name="password" id="password" required/>
+         </div>
+
+          <div class="item">
+            <p>Port<sup style="color: red;">*</sup></p>
+            <input type="text" name="port" id="port" required/>
+         </div>
+
+          <div class="item">
+            <p>ID Column (Primary Key)<sup style="color: red;">*</sup></p>
+            <input type="text" name="id_col" id="id_col" required/>
+         </div>
+
+          <div class="item">
+            <p>Target Column<sup style="color: red;">*</sup></p>
+            <input type="text" name="target_col" id="target_col" required/>
+         </div>
+
+
+
+
+
+        <div class="btn-block">
+          <button type="submit" href="/db_input">Submit</button>
+        </div>
+<div class="item">
+          <p style="color: red;">{{error}}</p>
+</div>
+      </form>
+    </div>
+  </body>
+</html>

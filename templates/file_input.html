@@ -1,0 +1,48 @@
+<!--sourced and modified from https://www.w3docs.com/learn-html/html-form-templates.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Income Prediction Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+  <ul>
+  <li><a href="/">Form input</a></li>
+  <li><a href="/db_input">DB input</a></li>
+  <li style="background-color:gray;"><a href="/file_input">File input</a></li>
+      <li><a href="/help">Help</a></li>
+</ul>
+    <div class="testbox">
+      <form action="/file_input" method="POST" enctype="multipart/form-data">
+        <div class="banner">
+          <h1>Income Prediction Application</h1>
+        </div>
+          <div>
+          <h2 style="background-color:white; font-weight: bold;
+          height: 40px; width: 100%;line-height: 40px;text-valign: center;">
+              {{result}}</h2>
+            </div>
+        <h2>Please Enter The File Details</h2>
+
+          <div class="item">
+            <p>Input Data File<sup style="color: red;">*</sup></p>
+          <input type="file" name="fileinput" id="fileinput" accept=".csv,.xlsx"/>
+              </div>
+
+        <div class="item">
+            <p>Target Column<sup style="color: red;">*</sup></p>
+            <input type="text" name="target_col" id="target_col" required/>
+        </div>
+
+        <div class="btn-block">
+          <button type="submit" href="/file_input">Submit</button>
+        </div>
+<div class="item">
+          <p style="color: red;">{{error}}</p>
+</div>
+      </form>
+    </div>
+  </body>
+</html>

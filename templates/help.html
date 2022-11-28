@@ -1,0 +1,72 @@
+<!--sourced and modified from https://www.w3docs.com/learn-html/html-form-templates.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Income Prediction Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+  <ul>
+  <li><a href="/">Form input</a></li>
+  <li><a href="/db_input">DB input</a></li>
+  <li><a href="/file_input">File input</a></li>
+      <li style="background-color:gray;"><a href="/help">Help</a></li>
+</ul>
+    <div class="testbox">
+      <form>
+        <div class="banner">
+          <h1>Income Prediction Application</h1>
+        </div>
+          <div>
+          <h2 style="background-color:lightgray; font-weight: bold;
+          height: 40px; width: 100%;line-height: 40px;text-valign: center;">
+              Help</h2>
+            </div>
+        <h2>Form Input</h2>
+        <ol>
+          <li>Form input takes inputs from user, passes it to the prediction API and
+            displays the prediction.</li>
+          <li>If a user is not willing to disclose any of the requested information. He/she is free to leave it untouched.
+          Such inputs are considered as missing values.</li>
+          <li>
+            The result is displayed on the upper portion of the page, below the banner. Errors, if any, will be
+            displayed at the bottom of the page below the predict button.
+          </li>
+        </ol>
+&nbsp;
+        <h2>DB Input</h2>
+        <ol>
+          <li>This service assumes the data with independent features and the target are stored in a database.
+            The target has some missing values which must be updated with the predictions.</li>
+          <li>
+            The user enters the DB credentials, the id/primary key column that
+            uniquely identifies a data sample/row and the target column.
+          </li>
+          <li>
+          The prediction of each sample/record is updated in the target field of the database using the id/primary key.
+          </li>
+        </ol>
+
+&nbsp;
+        <h2>File Input</h2>
+        <ol>
+          <li>This service assumes the data with independent features are stored in a CSV/Excel file and
+            the prediction must be appended to each row/sample.
+</li>
+          <li>
+          The user uploads a CSV/Excel file with independent features and the target column name.
+          </li>
+          <li>
+The prediction of each sample/row is appended to each row/sample.
+Once all the rows/samples are appended with the prediction. The file is downloaded automatically
+            in the same format as that of the uploaded file. Upon any error, the error is displayed to the user.
+
+          </li>
+        </ol>
+
+      </form>
+    </div>
+  </body>
+</html>
